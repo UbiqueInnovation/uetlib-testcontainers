@@ -1,0 +1,42 @@
+name: Build on Tag and Deploy Artifactory
+on:
+    push:
+        tags:
+            - v*
+
+jobs:
+    build:
+        name: Build and test Project
+        uses: UbiqueInnovation/workflows-backend/.github/workflows/mvn_install.yml@main
+        with:
+            ref_name: ${{ github.ref_name }}
+            parent_pom: pom.xml
+        secrets:
+            artifactory_user: ${{ secrets.UB_ARTIFACTORY_USER }}
+            artifactory_password: ${{ secrets.UB_ARTIFACTORY_PASSWORD }}
+            artifactory_url: ${{ secrets.UB_ARTIFACTORY_URL }}
+            artifactory_repo: ${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
+
+    deploy-artifactory:
+        name: Deploy Project to Artifactory
+        needs: [ build ]
+        uses: UbiqueInnovation/workflows-backend/.github/workflows/mvn_package_deploy.yml@feature/alt-deployment-repository
+        with:
+            ref_name: ${{ github.ref_name }}
+            parent_pom: pom.xml
+        secrets:
+            artifactory_user: ${{ secrets.UB_ARTIFACTORY_USER }}
+            artifactory_password: ${{ secrets.UB_ARTIFACTORY_PASSWORD }}
+            artifactory_url: ${{ secrets.UB_ARTIFACTORY_URL }}
+            artifactory_repo: ${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
+
+    create_github_release:
+        name: Create new ${{ contains(github.ref_name, '-') == true && 'Prerelease' || 'Release' }}
+        needs: [ deploy-artifactory ]
+        uses: UbiqueInnovation/workflows-backend/.github/workflows/github_release.yml@main
+        with:
+            ref_name: ${{ github.ref_name }}
+            release_option_prerelease: ${{ contains(github.ref_name, '-') }}
+            changelog_file: CHANGELOG.md
+        secrets:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
