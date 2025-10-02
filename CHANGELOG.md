@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.0
+
+### Improvements
+
+- Renovate Version Updates
+
 ## 1.1.0
 
 ### Improvements
