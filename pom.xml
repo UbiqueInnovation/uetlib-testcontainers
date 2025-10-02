@@ -7,7 +7,7 @@
     <parent>
         <groupId>ch.ubique</groupId>
         <artifactId>uetlib-parent</artifactId>
-        <version>1.2.4</version>
+        <version>1.2.5</version>
     </parent>
 
     <artifactId>uetlib-testcontainers-parent</artifactId>
@@ -21,6 +21,8 @@
         <module>uetlib-testcontainers-mongodb</module>
         <module>uetlib-testcontainers-mysql</module>
         <module>uetlib-testcontainers-postgresql</module>
+        <module>uetlib-testcontainers-influxdb</module>
+        <module>uetlib-testcontainers-redis</module>
     </modules>
 
     <properties>
@@ -56,7 +58,6 @@
             <artifactId>junit-jupiter</artifactId>
         </dependency>
     </dependencies>
-
 
     <repositories>
         <repository>
