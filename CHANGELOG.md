@@ -4,6 +4,7 @@
 
 ### Improvements
 
+- Add testcontainers-influxdb and testcontainers-redis
 - Renovate Version Updates
 
 ## 1.1.0
