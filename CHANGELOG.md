@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.1
+
+### Improvements
+
+- Update `testcontainers-redis` to the new group id `org.testcontainers`.
+
 ## 1.2.0
 
 ### Improvements
