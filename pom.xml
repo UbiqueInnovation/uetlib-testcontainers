@@ -7,7 +7,7 @@
     <parent>
         <groupId>ch.ubique</groupId>
         <artifactId>uetlib-parent</artifactId>
-        <version>1.3.2</version>
+        <version>2026.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>uetlib-testcontainers-parent</artifactId>
@@ -23,12 +23,12 @@
         <module>uetlib-testcontainers-postgresql</module>
         <module>uetlib-testcontainers-influxdb</module>
         <module>uetlib-testcontainers-redis</module>
+        <module>uetlib-testcontainers-coverage</module>
     </modules>
 
     <properties>
-        <!-- Sonar-->
         <sonar.projectName>uetlib-testcontainers</sonar.projectName>
-        <sonar.coverage.module>uetlib-testcontainers</sonar.coverage.module>
+        <sonar.coverage.module>uetlib-testcontainers-coverage</sonar.coverage.module>
     </properties>
 
     <dependencies>
@@ -55,23 +55,29 @@
 
         <dependency>
             <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
+            <artifactId>testcontainers-junit-jupiter</artifactId>
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>ubique-artifactory</id>
-            <name>backend</name>
-            <url>https://artifactory.ubique.ch/artifactory/backend</url>
-        </repository>
-    </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ch.ubique</groupId>
+                <artifactId>uetlib-bom</artifactId>
+                <version>2026.0.0-SNAPSHOT</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <distributionManagement>
         <repository>
             <id>ubique-artifactory</id>
-            <name>backend</name>
-            <url>https://artifactory.ubique.ch/artifactory/backend</url>
         </repository>
     </distributionManagement>
+
+    <scm>
+        <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+    </scm>
 </project>
