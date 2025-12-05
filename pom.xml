@@ -77,6 +77,15 @@
         </repository>
     </distributionManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>de.westemeyer</groupId>
+                <artifactId>artifact-version-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <scm>
         <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
     </scm>
