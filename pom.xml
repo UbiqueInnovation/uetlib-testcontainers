@@ -7,7 +7,7 @@
     <parent>
         <groupId>ch.ubique</groupId>
         <artifactId>uetlib-parent</artifactId>
-        <version>2026.0.0-alpha.1</version>
+        <version>2026.0.0-alpha.3</version>
     </parent>
 
     <artifactId>uetlib-testcontainers-parent</artifactId>
@@ -32,6 +32,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>ch.ubique</groupId>
+            <artifactId>uetlib-test</artifactId>
+            <version>2.0.0-alpha.2</version>
+        </dependency>
+
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -66,12 +72,6 @@
             <url>https://repo.osgeo.org/repository/release/</url>
         </repository>
     </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>ubique-artifactory</id>
-        </repository>
-    </distributionManagement>
 
     <scm>
         <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
