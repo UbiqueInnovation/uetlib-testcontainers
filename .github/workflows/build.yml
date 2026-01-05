@@ -26,11 +26,3 @@ jobs:
         uses: UbiqueInnovation/action-systems-mvn-install@v0.1.5
         with:
           parent_pom: pom.xml
-
-      - name: Upload SonarCloud test report
-        uses: UbiqueInnovation/action-systems-mvn-verify-sonar@v1.0.0
-        with:
-          ref_name: ${{ github.ref_name }}
-          parent_pom: pom.xml
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          sonar_token: ${{ secrets.UBIQUE_SONAR_TOKEN }}
