@@ -23,6 +23,6 @@ jobs:
           mvn_repository_url: ${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
 
       - name: Maven Install
-        uses: UbiqueInnovation/action-systems-mvn-install@cd38fe2dd8a1606406e38f51bf101a62bb1763a7 # v0.1.5
+        uses: UbiqueInnovation/action-systems-mvn-install@aa3ba3077a3347317775acd000ec613018b9b903 # v1.0.1
         with:
           parent_pom: pom.xml
