@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           ref: ${{ github.ref_name }}
 
       - name: Prepare maven
-        uses: UbiqueInnovation/action-systems-mvn-prepare@v1.0.1
+        uses: UbiqueInnovation/action-systems-mvn-prepare@1f1440329f80458fcbf99214a888160840196d17 # v1.1.0
         with:
           mvn_repository_id: ubique-artifactory
           mvn_repository_user: ${{ secrets.UB_ARTIFACTORY_USER }}
@@ -23,6 +23,6 @@ jobs:
           mvn_repository_url: ${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
 
       - name: Maven Install
-        uses: UbiqueInnovation/action-systems-mvn-install@v0.1.5
+        uses: UbiqueInnovation/action-systems-mvn-install@cd38fe2dd8a1606406e38f51bf101a62bb1763a7 # v0.1.5
         with:
           parent_pom: pom.xml
