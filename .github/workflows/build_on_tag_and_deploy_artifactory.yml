@@ -38,7 +38,7 @@ jobs:
       # Upload artifacts to artifactory
 
       - name: Upload JARs
-        uses: UbiqueInnovation/action-systems-mvn-package-deploy@0aebdb7d1dfae06ca3bf3e110b3bfb423ee7f71f # v1.0.0
+        uses: UbiqueInnovation/action-systems-mvn-package-deploy@6cf28519519e470139f0c7a6e4b54ed0af4c8fd5 # v1.0.3
         with:
           parent_pom: pom.xml
           alt_deployment_repository: ubique-artifactory::${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
@@ -46,7 +46,7 @@ jobs:
       # Create a GitHub release
 
       - name: Create GitHub ${{ contains(github.ref_name, '-') == true && 'Prerelease' || 'Release' }}
-        uses: UbiqueInnovation/action-systems-github-release@a20d3197834d18f2f88c4f0726546bc038bdc788 # v1.0.0
+        uses: UbiqueInnovation/action-systems-github-release@5db68dd4a817a585f4a0a9aa7a2cbb8b32cc4433 # v1.0.1
         with:
           ref_name: ${{ github.ref_name }}
           release_option_prerelease: ${{ contains(github.ref_name, '-') }}
