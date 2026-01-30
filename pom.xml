@@ -73,7 +73,7 @@
         </repository>
     </repositories>
 
-    <scm>
+    <scm child.scm.url.inherit.append.path="false">
         <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
     </scm>
 </project>
