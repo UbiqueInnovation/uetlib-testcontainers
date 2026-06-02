@@ -48,6 +48,11 @@
             <artifactId>uetlib-testcontainers-redis</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ch.ubique</groupId>
+            <artifactId>uetlib-testcontainers-kafka</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
