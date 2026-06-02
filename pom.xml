@@ -27,6 +27,9 @@
     </modules>
 
     <properties>
+        <!-- westemeyer version config -->
+        <westemeyer-version-package-name>ch.ubique.backend.testcontainers.version</westemeyer-version-package-name>
+
         <sonar.projectName>uetlib-testcontainers</sonar.projectName>
         <sonar.coverage.module>uetlib-testcontainers-coverage</sonar.coverage.module>
     </properties>
@@ -66,6 +69,16 @@
     </dependencies>
 
     <repositories>
+        <repository>
+            <id>ubique-artifactory</id>
+            <name>backend</name>
+            <url>https://artifactory.ubique.ch/artifactory/backend</url>
+        </repository>
+        <repository>
+            <id>ubique-artifactory-virtual</id>
+            <name>ubique</name>
+            <url>https://artifactory.ubique.ch/artifactory/ubique</url>
+        </repository>
         <repository>
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
