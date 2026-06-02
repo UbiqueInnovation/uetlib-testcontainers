@@ -12,6 +12,13 @@
     <artifactId>uetlib-testcontainers-mongodb</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <!-- westemeyer version config -->
+        <westemeyer-version-package-name>
+            ch.ubique.backend.testcontainers.mongodb.version
+        </westemeyer-version-package-name>
+    </properties>
+
     <dependencies>
         <!--    uetlib    -->
         <dependency>
