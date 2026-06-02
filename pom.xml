@@ -23,6 +23,7 @@
         <module>uetlib-testcontainers-postgresql</module>
         <module>uetlib-testcontainers-influxdb</module>
         <module>uetlib-testcontainers-redis</module>
+        <module>uetlib-testcontainers-kafka</module>
         <module>uetlib-testcontainers-coverage</module>
     </modules>
 

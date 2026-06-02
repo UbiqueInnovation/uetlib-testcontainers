@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2.1.0
+
+- NullMarked
+- Add new `uetlib-testcontainers-kafka` module
+
+## 2.0.0
+
+- Ueltib 2.0
+
 ## 1.2.1
 
 ### Improvements
