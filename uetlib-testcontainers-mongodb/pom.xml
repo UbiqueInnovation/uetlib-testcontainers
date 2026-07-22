@@ -19,12 +19,21 @@
         </westemeyer-version-package-name>
     </properties>
 
-    <dependencies>
+        <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ch.ubique</groupId>
+                <artifactId>uetlib-testcontainers</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+<dependencies>
         <!--    uetlib    -->
         <dependency>
             <groupId>ch.ubique</groupId>
             <artifactId>uetlib-testcontainers</artifactId>
-            <version>${project.version}</version>
         </dependency>
 
         <!--    Testcontainers    -->
