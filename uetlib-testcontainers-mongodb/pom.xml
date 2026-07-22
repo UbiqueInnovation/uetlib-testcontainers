@@ -19,7 +19,7 @@
         </westemeyer-version-package-name>
     </properties>
 
-        <dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>ch.ubique</groupId>
@@ -29,7 +29,7 @@
         </dependencies>
     </dependencyManagement>
 
-<dependencies>
+    <dependencies>
         <!--    uetlib    -->
         <dependency>
             <groupId>ch.ubique</groupId>
