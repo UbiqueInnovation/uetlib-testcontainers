@@ -17,7 +17,7 @@
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
-        <dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>ch.ubique</groupId>
@@ -57,7 +57,7 @@
         </dependencies>
     </dependencyManagement>
 
-<dependencies>
+    <dependencies>
         <dependency>
             <groupId>ch.ubique</groupId>
             <artifactId>uetlib-testcontainers</artifactId>
