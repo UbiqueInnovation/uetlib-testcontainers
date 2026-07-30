@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.1
+
+- updated actions to not run tests twice for sonar
+
 ## 2.1.0
 
 - NullMarked
