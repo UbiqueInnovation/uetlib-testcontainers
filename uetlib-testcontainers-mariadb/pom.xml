@@ -13,13 +13,6 @@
     <artifactId>uetlib-testcontainers-mariadb</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-        <!-- westemeyer version config -->
-        <westemeyer-version-package-name>
-            ch.ubique.backend.testcontainers.mariadb.version
-        </westemeyer-version-package-name>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
