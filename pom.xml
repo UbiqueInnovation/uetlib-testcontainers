@@ -80,16 +80,19 @@
         <!-- ubique artifactory are necessary for resolution of the parent. -->
         <!-- Other repositories are resolved in the parent repositories. -->
         <repository>
-            <id>ubique-artifactory</id>
-            <name>backend</name>
-            <url>https://artifactory.ubique.ch/artifactory/backend</url>
-        </repository>
-        <repository>
             <id>ubique-artifactory-virtual</id>
             <name>ubique</name>
             <url>https://artifactory.ubique.ch/artifactory/ubique</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>ubique-artifactory-virtual</id>
+            <name>ubique</name>
+            <url>https://artifactory.ubique.ch/artifactory/ubique</url>
+        </repository>
+    </distributionManagement>
 
     <scm child.scm.url.inherit.append.path="false">
         <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
