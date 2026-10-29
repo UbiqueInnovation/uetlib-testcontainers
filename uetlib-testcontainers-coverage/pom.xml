@@ -6,7 +6,7 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>ch.ubique</groupId>
+        <groupId>ch.ubique.uetlib</groupId>
         <artifactId>uetlib-testcontainers-parent</artifactId>
         <version>3.0.0-SNAPSHOT</version>
     </parent>
@@ -20,37 +20,37 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-kafka</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-postgresql</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-mysql</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-mariadb</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers-influxdb</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-testcontainers</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -59,31 +59,31 @@
 
     <dependencies>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-influxdb</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-mariadb</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-mysql</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-redis</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.ubique.uetlib</groupId>
             <artifactId>uetlib-testcontainers-kafka</artifactId>
         </dependency>
     </dependencies>
