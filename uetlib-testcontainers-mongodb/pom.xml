@@ -12,6 +12,10 @@
     <artifactId>uetlib-testcontainers-mongodb</artifactId>
     <packaging>jar</packaging>
 
+    <name>uetlib-testcontainers-mongodb</name>
+    <description>Reusable Testcontainers configurations for integration tests.</description>
+    <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
