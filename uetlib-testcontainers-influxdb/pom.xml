@@ -13,6 +13,10 @@
     <artifactId>uetlib-testcontainers-influxdb</artifactId>
     <packaging>jar</packaging>
 
+    <name>uetlib-testcontainers-influxdb</name>
+    <description>Reusable Testcontainers configurations for integration tests.</description>
+    <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

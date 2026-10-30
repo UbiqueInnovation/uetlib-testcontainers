@@ -13,6 +13,10 @@
     <artifactId>uetlib-testcontainers-postgresql</artifactId>
     <packaging>jar</packaging>
 
+    <name>uetlib-testcontainers-postgresql</name>
+    <description>Reusable Testcontainers configurations for integration tests.</description>
+    <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

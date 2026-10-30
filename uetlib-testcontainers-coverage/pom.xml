@@ -13,6 +13,10 @@
 
     <artifactId>uetlib-testcontainers-coverage</artifactId>
 
+    <name>uetlib-testcontainers-coverage</name>
+    <description>Reusable Testcontainers configurations for integration tests.</description>
+    <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
