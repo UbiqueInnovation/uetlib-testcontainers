@@ -18,6 +18,8 @@
     <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
 
     <properties>
+        <central.publishing.skip>true</central.publishing.skip>
+
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 

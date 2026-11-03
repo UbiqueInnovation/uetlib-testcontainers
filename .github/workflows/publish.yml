@@ -1,0 +1,11 @@
+name: Publish
+on:
+  push:
+    tags: [ v* ]
+
+jobs:
+  publish:
+    permissions:
+      contents: write
+    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-publish.yml@741b4e58da1bb075f34aaa6df3bc5794de1e5a6b # opensourcing (unreleased; re-pin to the released workflow)
+    secrets: inherit
