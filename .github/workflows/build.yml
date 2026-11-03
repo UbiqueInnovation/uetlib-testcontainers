@@ -7,44 +7,11 @@ on:
 jobs:
   build:
     name: Build Project
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          ref: ${{ github.ref_name }}
-
-      - name: Prepare maven
-        uses: UbiqueInnovation/action-systems-mvn-prepare@bfeb86b8129a37da7d062487cc1dfb60718836cc # v2.0.0
-        with:
-          mvn_servers: >-
-            [
-              {
-                "id": "ubique-artifactory-virtual",
-                "username": "${{ secrets.UB_ARTIFACTORY_USER }}",
-                "password": "${{ secrets.UB_ARTIFACTORY_PASSWORD }}"
-              }
-            ]
-          mvn_repositories: >-
-            [
-              {
-                "id": "ubique-artifactory-virtual",
-                "url": "${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_UBIQUE }}"
-              }
-            ]
-
-      - name: Maven Install
-        id: maven_install
-        uses: UbiqueInnovation/action-systems-mvn-install@1e861d926529f75b9a2e02162965f813b944ee0f # v1.3.0
-        with:
-          parent_pom: pom.xml
-
-      - name: Maven Verify Sonar
-        uses: UbiqueInnovation/action-systems-mvn-verify-sonar@d7b1e7a7794f1e3ca136e7f0b25640b16047d4ca # v2.0.0
-        with:
-          ref_name: ${{ github.ref_name }}
-          parent_pom: pom.xml
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          sonar_token: ${{ secrets.UBIQUE_SONAR_TOKEN }}
-          tests_ran: ${{ steps.maven_install.outputs.tests_ran }}
+    permissions:
+      contents: read
+    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-install.yml@4ec4716424bf5b8252ea5480f680440c91233cc6 # v0.1.0
+    with:
+      sonar: true
+    secrets:
+      SONAR_TOKEN: ${{ secrets.UBIQUE_SONAR_TOKEN }}
 
