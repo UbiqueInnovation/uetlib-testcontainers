@@ -5,18 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ch.ubique</groupId>
+        <groupId>ch.uetlib</groupId>
         <artifactId>uetlib-testcontainers-parent</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
+        <version>4.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>uetlib-testcontainers-influxdb</artifactId>
     <packaging>jar</packaging>
 
+    <name>uetlib-testcontainers-influxdb</name>
+    <description>Reusable Testcontainers configurations for integration tests.</description>
+    <url>https://github.com/UbiqueInnovation/uetlib-testcontainers</url>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>ch.ubique</groupId>
+                <groupId>ch.uetlib</groupId>
                 <artifactId>uetlib-testcontainers</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -26,7 +30,7 @@
     <dependencies>
         <!--    uetlib    -->
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.uetlib</groupId>
             <artifactId>uetlib-testcontainers</artifactId>
         </dependency>
 
