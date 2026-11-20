@@ -7,5 +7,5 @@ jobs:
   publish:
     permissions:
       contents: write
-    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-publish.yml@b2274a24393298710015211301cf003af6742147 # v1.1.1
+    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-publish.yml@8e735f5276f25dd3e279fff24a4ed959f4a58c69 # v1.2.0
     secrets: inherit
